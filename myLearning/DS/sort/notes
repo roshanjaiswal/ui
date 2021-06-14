@@ -1,0 +1,60 @@
+Selection Sort
+Bubble Sort
+Recursive Bubble Sort
+Insertion Sort
+Binary Insertion Sort
+Recursive Insertion Sort
+Merge Sort
+Iterative Merge Sort
+Quick Sort
+Iterative Quick Sort
+Heap Sort
+Counting Sort
+Radix Sort
+Bucket Sort
+ShellSort
+TimSort
+Comb Sort
+Pigeonhole Sort
+Cycle Sort
+Cocktail Sort
+Strand Sort
+Bitonic Sort
+Pancake sorting
+BogoSort or Permutation Sort
+Gnome Sort
+Sleep Sort – The King of Laziness / Sorting while Sleeping
+Structure Sorting (By Multiple Rules) in C++
+Stooge Sort
+Tag Sort (To get both sorted and original)
+Tree Sort
+Cartesian Tree Sorting
+Odd-Even Sort / Brick Sort
+QuickSort on Singly Linked List
+QuickSort on Doubly Linked List
+3-Way QuickSort (Dutch National Flag)
+Merge Sort for Linked Lists
+Merge Sort for Doubly Linked List
+3-way Merge Sort
+
+
+Tim Sort
+---------------
+The fastest sorting algorithm you've never heard of.
+-- Tim sort is fasted algorith in python.
+Timsort (derived from merge sort and insertion sort) was introduced in 2002 and 
+    while slower than quicksort for random data, Timsort performs better on ordered data.
+
+
+Quad Sort
+-----------------
+Quadsort (derived from merge sort) was introduced in 2020 and is faster than quicksort for random data, 
+    and slightly faster than Timsort on ordered data.
+
+
+Quick Sort 
+---------------
+Quick sort is better suited for large data sets. 
+It is the fastest and efficient algorithm for large sets of data.
+But it is inefficient if the elements in the list are already sorted which results 
+    in the worst case time complexity of O(n2).

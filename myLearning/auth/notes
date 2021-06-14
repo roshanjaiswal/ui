@@ -1,0 +1,6 @@
+Authentication :- For login
+Authorization  :- to check if user has access to some features.
+
+JWT
+-----------
+    -> used for Authorization 

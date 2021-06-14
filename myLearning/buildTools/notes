@@ -1,0 +1,184 @@
+Gulp
+Grunt  
+WebPack
+--------------------------
+
+
+Gulp  -- https://www.freecodecamp.org/news/super-simple-gulp-tutorial-for-beginners-45141974bfe8/
+---------
+    Compiling Sass files to CSS
+    Concatenating (combining) multiple JavaScript files
+    Minifying (compressing) your CSS and JavaScript files
+    And automatically running the above tasks when a file change is detected
+
+    Environment Setup:
+        Install Node.js and npm to your computer
+        Install Gulp and other packages needed for your project
+        Configure your gulpfile.js file to run the tasks you want
+        Let your computer do your work for you!
+
+    -> Gulp runs using Node 
+    
+    -> In the project folder
+        - npm init
+        - package.json is created as below 
+            {
+                "name": "super-simple-gulp-file",
+                "version": "1.0.0",
+                "description": "Super simple Gulp file",
+                "main": "gulpfile.js",
+                "scripts": {
+                    "test": "echo \"Error: no test specified\" && exit 1"
+                },
+                "repository": {
+                    "type": "git",
+                    "url": "git+https://github.com/thecodercoder/Super-Simple-Gulp-File.git"
+                },
+                "keywords": [
+                    "gulp"
+                ],
+                "author": "Jessica @thecodercoder",
+                "license": "ISC",
+                "bugs": {
+                    "url": "https://github.com/thecodercoder/Super-Simple-Gulp-File/issues"
+                },
+                "homepage": "https://github.com/thecodercoder/Super-Simple-Gulp-File#readme"
+            }
+        - Installing packages : npm install [Package Name] -save
+            - npm install gulp
+            gulp-sass — compiles your Sass files into CSS
+            gulp-cssnano — minifies your CSS files
+            gulp-concat — concatenates (combines) multiple JavaScript files into one large file
+            gulp-uglify — minifies your JavaScript files
+            - npm install gulp-sass 
+            - npm install gulp-cssnano 
+            - npm install gulp-concat 
+            - npm install gulp-uglify
+
+    -> Gulp-cli vs global Gulp
+        In the past, to be able to run “gulp” from your command line, 
+        you would have to install Gulp globally on your local computer, using the command:
+
+        npm install –global gulp
+
+        However, having a single global version of Gulp could cause issues if you have multiple projects all requiring different versions of Gulp.
+        The current consensus recommends installing a different package, Gulp-cli, globally instead of Gulp itself.
+        This will allow you to still run the “gulp” command, but you’re able to use different versions of Gulp across your different projects.
+
+        npm install --global gulp-cli
+
+    -> Set up your file structure
+        index.html
+        gulpfile.js  --- configure Gulp to run all the tasks
+        package.json
+        node_modules (folder)
+        app (folder)  ---  .js and .scss that we write
+        script.js
+        style.scss
+        dist (folder) -- final compiled JavaScript and CSS files after Gulp has processed them
+    
+    -> Create and configure your Gulpfile
+        - Initialize our installed packages as Node modules.
+            var gulp = require('gulp'); 
+            var cssnano = require('gulp-cssnano'); 
+            var sass = require('gulp-sass'); 
+            var concat = require('gulp-concat'); 
+            var uglify = require('gulp-uglify');
+
+        - Create and run Gulp tasks
+            gulp.task('[Function Name]', function(){    
+            // Do stuff here 
+            }
+            -This allows you to run the Gulp task by typing in gulp [Function Name] into the command line. 
+            This is important because you can then run that named function from other Gulp tasks.
+        
+        - Some of the main functions that we’ll be using are:
+            .task() — Creates a task, as mentioned above
+            .src() — identifies what files you will be compiling in a particular task
+            .pipe() — adds a function to the Node stream that Gulp is using; you can pipe multiple functions in the same task (read an excellent write-up on this topic on florian.ec)
+            .dest() — writes the resulting file to a specific location
+            .watch() — identifies the files to detect any changes
+
+        - Sass task
+            gulp.task('sass', function(){         - For the Sass task, first we want to create the task in Gulp using task(), and we will name it “sass.”
+                return gulp.src('app/style.scss') - Then we add in each component that the task will run. First we will designate that the source will be the app/scss/style.scss file, using src(). Then we will pipe in the additional functions.
+                    .pipe(sass())                 - It will automatically save the CSS file with the same name as the SCSS file, so ours will be named style.css.
+                    .pipe(cssnano())              - minifies the CSS file with cssnano(). 
+                    .pipe(gulp.dest('dist/css')); - And the last puts the resulting CSS file in the dist/css folder.
+            });
+
+            Example:
+                .scss:
+                    div {    
+                        display: block; 
+                        &.content {       
+                            position: relative;    
+                        } 
+                    } 
+                    .red { 
+                        color: red; 
+                    }
+
+                ------------
+                command line:
+                    gulp sass
+                    [15:04:53] Starting 'sass'... [15:04:53] Finished 'sass' after 121 ms
+
+                .css:
+                    div{display:block}div.content{position:relative}.red{color:red}
+        
+        - JS task
+            gulp.task('js', function(){    
+                return gulp.src(['app/js/plugins/*.js', 'app/js/*.js'])          
+                    .pipe(concat('all.js'))       
+                    .pipe(uglify())       
+                    .pipe(gulp.dest('dist')); 
+            });
+
+            - gulp.src('app/*.js')   Vs gulp.src(['app/js/lib/*.js', 'app/js/script/*.js'])
+
+        - Watch task
+            gulp.task('watch', function(){       
+                gulp.watch('app/*.scss', ['sass']);          
+                gulp.watch('app/js/**/*.js', ['js']); 
+            });
+
+        - Default Gulp task
+            gulp.task('default', ['sass', 'js', 'watch']); -- run the Sass and JS tasks once, then run the Watch task to re-run tasks when files are changed.
+
+        - References in your index.html
+            <link rel="stylesheet" href="dist/style.css">
+
+            <script src="dist/all.js"><;/script>
+
+
+-> WebPack (Latest version: 5.x.x) -- https://www.sitepoint.com/webpack-beginner-guide/
+                                        https://www.codeinwp.com/blog/webpack-tutorial-for-beginners/
+---------
+    As its core, webpack is a static module bundler. 
+    In a particular project, webpack treats all files and assets as modules. 
+    Under the hood, it relies on a dependency graph. 
+    A dependency graph describes how modules relate to each other using the references (require and import statements) 
+    between files. In this way, webpack statically traverses all modules to build the graph, 
+    and uses it to generate a single bundle (or several bundles) — a JavaScript file containing the code from 
+    all modules combined in the correct order. “Statically” means that, 
+    when webpack builds its dependency graph, it doesn’t execute the source code but stitches modules and their 
+    dependencies together into a bundle. 
+    This can then be included in your HTML files.
+
+    - Entry: the entry point is the module that webpack uses to start building its internal dependency graph. From there, it determines which other modules and libraries that entry point depends on (directly and indirectly) and includes them in the graph until no dependency is left. By default, the entry property is set to ./src/index.js, but we can specify a different module (or even multiple modules) in the webpack configuration file.
+    
+    - Output: the output property instructs webpack where to emit the bundle(s) and what name to use for the file(s). The default value for this property is ./dist/main.js for the main bundle and ./dist for other generated files — such as images, for example. Of course, we can specify different values in the configuration depending on our needs.
+    
+    - Loaders: by default, webpack only understands JavaScript and JSON files. To process other types of files and convert them into valid modules, webpack uses loaders. 
+            Loaders transform the source code of non-JavaScript modules, allowing us to preprocess those files before they’re added to the dependency graph. For example, a loader can transform files from a CoffeeScript language to JavaScript or inline images to data URLs. With loaders we can even import CSS files directly from our JavaScript modules.
+    
+    - Plugins: plugins are used for any other task that loaders can’t do. 
+            They provide us with a wide range of solutions about asset management, bundle minimization and optimization, and so on.
+    
+    - Mode: Typically, when we develop our application we work with two types of source code — one for the development build and one for the production build. 
+            Webpack allows us to set which one we want to be produced by changing the mode parameter to development, production or none. 
+            This allows webpack to use built-in optimizations corresponding to each environment. The default value is production. The none mode means that no default optimization options will be used.
+
+    -> Installing webpack
+        - webpack 5 requires Node 10.13.0 or higher
