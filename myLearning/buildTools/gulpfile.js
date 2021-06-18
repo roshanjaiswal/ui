@@ -13,6 +13,7 @@ gulp.task('sass', function(){
         .pipe(gulp.dest('dist')); // put final CSS in dist folder
 });
 
+
 // JS task: concatenates and uglifies JS files to script.js
 gulp.task('js', function(){
     return gulp.src(['app/js/plugins/*.js', 'app/js/*.js'])
@@ -21,7 +22,7 @@ gulp.task('js', function(){
         .pipe(gulp.dest('dist'));
 
         //--- https://www.youtube.com/watch?v=ax0ykSVPufs
-        
+
         // browserify
         // transform babelify [env]
         // bundle
