@@ -19,6 +19,19 @@ gulp.task('js', function(){
         .pipe(concat('all.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist'));
+
+        //--- https://www.youtube.com/watch?v=ax0ykSVPufs
+        
+        // browserify
+        // transform babelify [env]
+        // bundle
+        // source
+        // rename .min
+        // buffer.min
+        // init sourceMap
+        // uglify
+        // write sourceMap
+        // dist
 });
 
 // Watch task: watch SCSS and JS files for changes

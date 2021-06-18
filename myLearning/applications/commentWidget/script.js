@@ -24,3 +24,17 @@ const data = [{
         }]
     }]
 }]
+
+function loadComments(data){
+    var container = document.getElementById('displayComments');
+    if(data.length){
+        var ul = document.createElement('ul');
+        for(let i=0; i<data.length-1;i++){
+            var 
+        }
+    }
+}
+
+function createCommentList(){
+    
+}
