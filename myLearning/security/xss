@@ -1,0 +1,35 @@
+Cross-Site Scripting (XSS) Attacks
+----------------------------------------
+
+->Cross-site scripting, commonly referred to as XSS,
+  occurs when hackers execute malicious JavaScript within a victim’s browser.
+->
+
+
+-> Types:-
+    - Stored (Persistent) Cross-Site Scripting
+    - Reflected Cross-Site Scripting
+    - Self Cross-Site Scripting
+    - Blind Cross-Site Scripting
+    - DOM-Based Cross-Site Scripting
+    -
+    -
+    -
+
+-> How to Prevent Cross-Site Scripting Attacks?
+    - Allowlist Values
+    - Avoid and Restrict HTML in Inputs
+    - Sanitize Values
+    - Use HTTPOnly Flags on Cookies
+    - Use a WAF to Protect against Cross-Site Scripting Attacks
+
+-> Post-Hack Actions
+    - Locate Vulnerable Code
+    - Remove Malicious Content and Backdoors
+    - Patch the Vulnerability
+    - Update Your Credentials
+    - Set Up a WAF
+    
+
+Remote Code Execution (RCE) attacks
+------------------------------------------
