@@ -167,18 +167,63 @@ Gulp  -- https://www.freecodecamp.org/news/super-simple-gulp-tutorial-for-beginn
     This can then be included in your HTML files.
 
     - Entry: the entry point is the module that webpack uses to start building its internal dependency graph. From there, it determines which other modules and libraries that entry point depends on (directly and indirectly) and includes them in the graph until no dependency is left. By default, the entry property is set to ./src/index.js, but we can specify a different module (or even multiple modules) in the webpack configuration file.
-    
+        An object with entry point description. You can specify the following properties.
+        -dependOn: The entry points that the current entry point depends on. They must be loaded before this entry point is loaded.
+        -filename: Specifies the name of each output file on disk.
+        -import: Module(s) that are loaded upon startup.
+        -library: Specify library options to bundle a library from current entry.
+        -runtime: The name of the runtime chunk. If set, a runtime chunk with this name is created otherwise an existing entry point is used as runtime.
+        -publicPath: Specify a public URL address for the output files of this entry when they are referenced in a browser.
+
+        **runtime and dependOn should not be used together on a single entry, so the following config is invalid and would throw an error
+            module.exports = {
+                entry: {
+                    a2: './a',
+                    b2: {
+                        runtime: 'x2',
+                        dependOn: 'a2',
+                        import: './b',
+                    },
+                },
+            };
+        **Make sure runtime must not point to an existing entry point name, for example the below config would throw an error:
+            module.exports = {
+                entry: {
+                    a1: './a',
+                    b1: {
+                        runtime: 'a1',
+                        import: './b',
+                    },
+                },
+            };
+        **dependOn must not be circular, the following example again would throw an error:
+            module.exports = {
+                entry: {
+                    a3: {
+                        import: './a',  
+                        dependOn: 'b3',
+                    },
+                    b3: {
+                        import: './b',
+                        dependOn: 'a3',
+                    },
+                },
+            };
     - Output: the output property instructs webpack where to emit the bundle(s) and what name to use for the file(s). The default value for this property is ./dist/main.js for the main bundle and ./dist for other generated files — such as images, for example. Of course, we can specify different values in the configuration depending on our needs.
     
     - Loaders: by default, webpack only understands JavaScript and JSON files. To process other types of files and convert them into valid modules, webpack uses loaders. 
             Loaders transform the source code of non-JavaScript modules, allowing us to preprocess those files before they’re added to the dependency graph. For example, a loader can transform files from a CoffeeScript language to JavaScript or inline images to data URLs. With loaders we can even import CSS files directly from our JavaScript modules.
     
-    - Plugins: plugins are used for any other task that loaders can’t do. 
-            They provide us with a wide range of solutions about asset management, bundle minimization and optimization, and so on.
+    - Plugins: While loaders are used to transform certain types of modules, plugins can be leveraged to perform a wider range of tasks like bundle optimization, asset management and injection of environment variables.
     
     - Mode: Typically, when we develop our application we work with two types of source code — one for the development build and one for the production build. 
             Webpack allows us to set which one we want to be produced by changing the mode parameter to development, production or none. 
             This allows webpack to use built-in optimizations corresponding to each environment. The default value is production. The none mode means that no default optimization options will be used.
 
-    -> Installing webpack
-        - webpack 5 requires Node 10.13.0 or higher
+    - Browser Compatibility
+        -webpack supports all browsers that are ES5-compliant (IE8 and below are not supported).
+         webpack needs Promise for import() and require.ensure(). 
+         If you want to support older browsers, you will need to load a polyfill before using these expressions.
+
+    - Environment
+        webpack 5 runs on Node.js version 10.13.0+.
