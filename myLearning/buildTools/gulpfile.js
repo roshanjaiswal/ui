@@ -13,12 +13,26 @@ gulp.task('sass', function(){
         .pipe(gulp.dest('dist')); // put final CSS in dist folder
 });
 
+
 // JS task: concatenates and uglifies JS files to script.js
 gulp.task('js', function(){
     return gulp.src(['app/js/plugins/*.js', 'app/js/*.js'])
         .pipe(concat('all.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist'));
+
+        //--- https://www.youtube.com/watch?v=ax0ykSVPufs
+
+        // browserify
+        // transform babelify [env]
+        // bundle
+        // source
+        // rename .min
+        // buffer.min
+        // init sourceMap
+        // uglify
+        // write sourceMap
+        // dist
 });
 
 // Watch task: watch SCSS and JS files for changes

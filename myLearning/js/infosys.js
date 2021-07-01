@@ -26,19 +26,18 @@ var targetObj= JSON.parse(JSON.stringify(jsonData));
 var sourceObj = JSON.parse(JSON.stringify(jsonDataNew));
 
 function deepMergeObj(target,source){
-    for(prop in target){
-        console.log("prop>>>", prop)
-        console.log("target[prop]>>>", target[prop])
-        console.log("source[prop]>>>", source[prop])
+    for(prop in source){
+        // console.log("prop>>>", prop)
+        // console.log("target[prop]>>>", target[prop])
+        // console.log("source[prop]>>>", source[prop])
         if(isObject(target[prop]) && source[prop]){
             deepMergeObj(target[prop],source[prop])
         }
         else if(source[prop] && isArray(source[prop])){
             source[prop].forEach(objInArrSource => {
                 let found = false;
-                contTypeSource = objInArrSource.contType;
                 target[prop].forEach(objInArrTar => {
-                    if(contTypeSource === objInArrTar.contType){
+                    if(objInArrSource.contType === objInArrTar.contType){
                         shallowMergeObj(objInArrTar,objInArrSource)
                         found = true;
                     }
@@ -49,7 +48,7 @@ function deepMergeObj(target,source){
         else if(source[prop]) {
             target[prop] = source[prop];
         }
-        console.log("----------------------")
+        // console.log("----------------------")
     }
 }
 
@@ -68,7 +67,7 @@ function isArray(val){
 }
 
 
-console.log("targetObj old >>", JSON.parse(JSON.stringify(jsonData)))
-console.log("sourceObj >>", sourceObj)
-mergeObj(targetObj,sourceObj)
-console.log("targetObj New >>", targetObj)
+// console.log("targetObj old >>", JSON.parse(JSON.stringify(jsonData)))
+// console.log("sourceObj >>", sourceObj)
+deepMergeObj(targetObj,sourceObj)
+// console.log("targetObj New >>", targetObj)

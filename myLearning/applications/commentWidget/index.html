@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../../library/jquery/jquery.min.js"></script>
+    <script src="../../library/jquery/jquery-3.6.0.js"></script>
     <link rel="stylesheet" href="../../library/bootstrap-4.5.3-dist/css/bootstrap.css">
     <script src="../../library/bootstrap-4.5.3-dist/js/bootstrap.js"></script>
     <script src="script.js"></script>
@@ -13,10 +13,22 @@
     <title>Comment Widgets</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <div class="title">Comment Widgets</div>
+    </header>
     <article>
-        <div class="container"></div>
+        <div class="container">
+            <form id="commentForm">
+                <textarea id="commentBox" placeholder="Enter your comments here."></textarea>
+                <input class="btn btn-primary submitButton" type="submit" value="Submit">
+            </form>
+            <div class="comments jumbotron" id="displayComments">
+
+            </div>
+        </div>
     </article>
-    <footer></footer>
+    <footer>
+        <div class="footerContainer">Copy Right @Roshan Kumar Jaiswal 2021</div>
+    </footer>
 </body>
 </html>

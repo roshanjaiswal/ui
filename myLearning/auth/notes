@@ -1,6 +1,12 @@
 Authentication :- For login
 Authorization  :- to check if user has access to some features.
 
-JWT
+JWT - https://gist.github.com/soulmachine/b368ce7292ddd7f91c15accccc02b8df
 -----------
     -> used for Authorization 
+    -> serialized and signed
+    -> not encrypted by default
+
+
+LTPA
+-----------
