@@ -1,0 +1,23 @@
+Order of execution of route guards:
+------------------------------------
+    A route can have multiple guards and you can have guards at every level of a routing hierarchy.
+    CanDeactivate() and CanActivateChild() guards are always checked first. The checking starts from the deepest child route to the top.
+    CanActivate() guard is checked next and checking starts from the top to the deepest child route.
+    CanLoad() is invoked next,  If the feature module is to be loaded asynchronously.
+    Resolve() Guard is invoked last.
+    The Angular Router cancels the navigation If any of the guards return false.
+
+If any one of the guard returns a UrlTree, 
+current navigation will be cancelled and a 
+new navigation will be kicked off to the UrlTree returned from the guard.
+
+
+canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): 
+                Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree
+
+canDeactivate(component: T, 
+                currentRoute: ActivatedRouteSnapshot, 
+                currentState: RouterStateSnapshot, 
+                nextState?: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree
+ 
+resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<T> | Promise<T> | T

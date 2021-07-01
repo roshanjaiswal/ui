@@ -209,12 +209,14 @@ Gulp  -- https://www.freecodecamp.org/news/super-simple-gulp-tutorial-for-beginn
                     },
                 },
             };
+    
     - Output: the output property instructs webpack where to emit the bundle(s) and what name to use for the file(s). The default value for this property is ./dist/main.js for the main bundle and ./dist for other generated files — such as images, for example. Of course, we can specify different values in the configuration depending on our needs.
     
     - Loaders: by default, webpack only understands JavaScript and JSON files. To process other types of files and convert them into valid modules, webpack uses loaders. 
             Loaders transform the source code of non-JavaScript modules, allowing us to preprocess those files before they’re added to the dependency graph. For example, a loader can transform files from a CoffeeScript language to JavaScript or inline images to data URLs. With loaders we can even import CSS files directly from our JavaScript modules.
     
-    - Plugins: While loaders are used to transform certain types of modules, plugins can be leveraged to perform a wider range of tasks like bundle optimization, asset management and injection of environment variables.
+    - Plugins: While loaders are used to transform certain types of modules, plugins can be leveraged to perform a wider range of tasks like 
+                bundle optimization, asset management and injection of environment variables.
     
     - Mode: Typically, when we develop our application we work with two types of source code — one for the development build and one for the production build. 
             Webpack allows us to set which one we want to be produced by changing the mode parameter to development, production or none. 
