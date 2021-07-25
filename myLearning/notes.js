@@ -20,6 +20,30 @@ function getCategory(age) {
 getCategory(5);  // will return "Baby"
 
 
+switch (new Date().getDay()) {
+    case 0:
+      day = "Sunday";
+      break;
+    case 1:
+      day = "Monday";
+      break;
+    case 2:
+       day = "Tuesday";
+      break;
+    case 3:
+      day = "Wednesday";
+      break;
+    case 4:
+      day = "Thursday";
+      break;
+    case 5:
+      day = "Friday";
+      break;
+    case 6:
+      day = "Saturday";
+  }
+//-----------------------------------------------------------------------------------------
+
 // Set timeouts to XMLHttpRequests.
 // You could abort the connection if an XHR takes a long time (for example, 
 //     due to a network issue), by using setTimeout() with the XHR call.
