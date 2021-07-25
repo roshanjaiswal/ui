@@ -1,4 +1,4 @@
-//Use a switch/case statement instead of a series of if/else
+//  Use a switch/case statement instead of a series of if/else
 function getCategory(age) {  
     var category = "";  
     switch (true) {  
@@ -43,6 +43,8 @@ if (hungry) {
 }
 hungry && goToFridge()
 
+//  ----------------------------------
+
 var a = false;
 a ||= "roshan";
 
@@ -53,15 +55,16 @@ b &&= "roshan";
 var c= undefined //null/undefined 
 c ??="roshan";
 
+//  --------------------------------------
 
 // == andd === difference 
-   // == -> Does type Coercion
+// == -> Does type Coercion
 
 
-//Double free error?
-//This is one of the memory safety bugs in Rust, which we will try to understand through a dialogue in this blog post.
-// let s1 = String::from("Hello");
-// let s2 = s1;
+//  Double free error?
+//  This is one of the memory safety bugs in Rust, which we will try to understand through a dialogue in this blog post.
+//  let s1 = String::from("Hello");
+//  let s2 = s1;
 
 // Use logical OR for conditions.
 function doSomething(arg1){ 
