@@ -1,0 +1,120 @@
+Advantages of NLP
+----------------------------------------------
+    NLP helps users to ask questions about any subject and get a direct response within seconds.
+    NLP offers exact answers to the question means it does not offer unnecessary and unwanted information.
+    NLP helps computers to communicate with humans in their languages.
+    It is very time efficient.
+    Most of the companies use NLP to improve the efficiency of documentation processes, accuracy of documentation, and identify the information from large databases.
+
+
+Disadvantages of NLP
+----------------------------------------------------------
+    NLP may not show context.
+    NLP is unpredictable
+    NLP may require more keystrokes.
+    NLP is unable to adapt to the new domain, and it has a limited function that's why NLP is built for a single and specific task only.
+
+Components of NLP
+------------------------------------------------------------
+1. Natural Language Understanding (NLU)
+2. Natural Language Generation (NLG)
+
+
+Applications of NLP
+----------------------------------------------------------------
+1. Question Answering
+2. Spam Detection
+3. Sentiment Analysis
+4. Machine Translation
+5. Spelling correction
+6. Speech Recognition
+7. Chatbot
+8. Information extraction 
+9. Natural Language Understanding (NLU)
+
+
+How to build an NLP pipeline
+-------------------------------------------------------------
+Step 1: Sentence Segmentation
+Step 2: Word Tokenization
+Step 3: Stemming
+Step 4: Lemmatization
+Step 5: Identifying Stop Words
+Step 7: POS tags
+Step 8: Named Entity Recognition (NER)
+Step 9: Chunking
+
+
+
+Phases of NLP
+-----------------------------------------------------------------
+1. Lexical Analysis and Morphological
+2. Syntactic Analysis (Parsing)
+3. Semantic Analysis
+4. Discourse Integration
+5. Pragmatic Analysis
+
+
+Why NLP is difficult?
+------------------------------------------------------------------
+Ambiguity
+    Lexical Ambiguity
+    Syntactic Ambiguity
+    Referential Ambiguity
+
+
+NLP APIs
+---------------------------------------------------------------
+IBM Watson API
+Chatbot API
+Speech to text API
+Sentiment Analysis API
+Translation API by SYSTRAN
+Text Analysis API by AYLIEN
+Cloud NLP API
+Google Cloud Natural Language API
+
+
+NLP Libraries
+----------------------------------------------------------
+    Scikit-learn: It provides a wide range of algorithms for building machine learning models in Python.
+    Natural language Toolkit (NLTK): NLTK is a complete toolkit for all NLP techniques.
+    Pattern: It is a web mining module for NLP and machine learning.
+    TextBlob: It provides an easy interface to learn basic NLP tasks like sentiment analysis, noun phrase extraction, or pos-tagging.
+    Quepy: Quepy is used to transform natural language questions into queries in a database query language.
+    SpaCy: SpaCy is an open-source NLP library which is used for Data Extraction, Data Analysis, Sentiment Analysis, and Text Summarization.
+    Gensim: Gensim works with large datasets and processes data streams.
+    CoreNLP:
+
+
+    Libraries include; 
+        Textblob:
+        https://textblob.readthedocs.io/en/de...
+
+        Spacy:
+        https://spacy.io/
+
+        Nltk:
+        https://www.nltk.org/
+
+        Gensim:
+        https://radimrehurek.com/gensim/
+
+        Corenlp:
+        https://stanfordnlp.github.io/CoreNLP.
+
+
+
+
+Complete Road Map to prepare NLP
+--------------------------------------------------------------------------------------------------------------------------------
+BERT
+Transformers
+Bidirectional LSTM RNN,Encoders and Decoders,Attention Models
+Text Preprocessing level-3- Word Embeddings,World2vec
+Understanding recurrent Neural Networks,LSTM,GRU
+Get the Understanding of Artificial Neural Networks
+Solve Machine Learning Usecases
+Text Preprocessing - Gensim , word2vec ,AvgWord2vec
+Text Preprocessing level-2- Bag of Words,TFIDF,Unigrams,Bigrams,
+Text Preprocessing level-1 - Tokenization,Lemmatization,Stop word
