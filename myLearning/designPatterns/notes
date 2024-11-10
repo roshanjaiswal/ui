@@ -1,5 +1,10 @@
-Null Object Pattern
-Builder Pattern
-Singleton Pattern
-Facade Pattern
-Command Pattern
+https://medium.com/williambastidasblog/most-common-design-patterns-in-angular-what-they-are-and-how-to-apply-them-f0193b85e500
+	Inversion of Control
+	Singleton
+	Factory
+	Observer
+	Decorator
+	Strategy
+	Command
+	Builder
+  Facade
