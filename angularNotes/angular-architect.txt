@@ -1,1 +1,12 @@
-
+Separation of concerns
+single responsibilities
+clear boundaries between layers
+DRY code
+layered architecture
+design patterns
+object-oriented practices
+Layers
+Boundaries
+Inversion Of Control (DI)
+Testable
+Independent (Frameworks, UI, Database)
