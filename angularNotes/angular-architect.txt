@@ -1,3 +1,4 @@
+https://www.youtube.com/watch?v=PruY9SFGzcU&list=PLivKgMimNalnKni_5KQGpwH7-lFZd0wu8
 Clean Code
 --------------------------------
 Separation of concerns
@@ -22,3 +23,18 @@ Layesr (n-tier)
 Hexagonal
 Clean
 Onean
+
+
+Angular Schematics using Nx Workspace
+---------------------------------------------------
+
+
+
+How to Remove the Default Angular ErrorHandler - It is NOT for Production Use
+----------------------------------------------------------------------------------
+
+
+
+
+
+
