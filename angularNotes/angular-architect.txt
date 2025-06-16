@@ -34,6 +34,10 @@ How to Remove the Default Angular ErrorHandler - It is NOT for Production Use
 ----------------------------------------------------------------------------------
 
 
+The Microfrontend Revolution: Using Webpack 5 Module Federation with Angular | Manfred Steyer
+----------------------------------------------------------------------------------------------
+
+
 
 
 
