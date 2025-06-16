@@ -1,3 +1,5 @@
+Clean Code
+--------------------------------
 Separation of concerns
 single responsibilities
 clear boundaries between layers
@@ -5,8 +7,18 @@ DRY code
 layered architecture
 design patterns
 object-oriented practices
+
+Clean Architecture
+----------------------------
 Layers
 Boundaries
 Inversion Of Control (DI)
 Testable
 Independent (Frameworks, UI, Database)
+
+Architecture History
+----------------------------
+Layesr (n-tier)
+Hexagonal
+Clean
+Onean
