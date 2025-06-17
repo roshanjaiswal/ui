@@ -5,7 +5,11 @@ Angular follows a component-based architecture organized around key principles: 
 
 Here's a structured breakdown:
 1. Core Building Blocks
-
+  Modules (@NgModule)
+  Components (@Component)	
+  Services (@Injectable)
+  Directives (@Directive)
+  
 2. Architectural Flow
 
 
