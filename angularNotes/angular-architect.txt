@@ -9,6 +9,8 @@ Here's a structured breakdown:
   Components (@Component)	
   Services (@Injectable)
   Directives (@Directive)
+    - Structural (e.g., *ngFor, *ngIf)
+    - Attribute (e.g., ngStyle, ngClass)
   
 2. Architectural Flow
 
