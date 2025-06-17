@@ -1,4 +1,55 @@
 https://www.youtube.com/watch?v=PruY9SFGzcU&list=PLivKgMimNalnKni_5KQGpwH7-lFZd0wu8
+
+**Angular Architecture:
+Angular follows a component-based architecture organized around key principles: modularity, reusability, and separation of concerns.
+
+Here's a structured breakdown:
+1. Core Building Blocks
+
+2. Architectural Flow
+
+
+3. Key Concepts
+  Data Binding:
+    Interpolation: {{ value }}
+    Property Binding: [property]="value"
+    Event Binding: (event)="handler()"
+    Two-Way Binding: [(ngModel)]="property
+  Dependency Injection (DI):
+    Hierarchical injectors
+    Service instances shared across components
+  Change Detection:
+    Zone.js triggers automatic UI updates
+    Optimized with OnPush strategy
+  Routing (RouterModule):
+    Lazy-loaded modules
+    Route guards (canActivate)
+    Dynamic component loading
+
+4. Advanced Patterns
+  RxJS Observables
+  State Management
+  Interceptors
+
+5. Project Structure Best Practices
+
+6. Performance Optimization
+  Lazy Loading: loadChildren: () => import('./feature/feature.module')
+  AOT (Ahead-of-Time) Compilation: Faster rendering
+  Tree Shaking: Remove unused code
+  Change Detection: ChangeDetectionStrategy.OnPush
+
+Why This Architecture?
+  Modularity: Features encapsulated in separate modules
+  Testability: DI enables easy unit testing
+  Scalability: Hierarchical component structure
+  Reusability: Shared services/directives/components
+  Maintainability: Clear separation of concerns
+
+
+
+
+--------------------------------------------------------------------------------------------------------------
 Clean Code
 --------------------------------
 Separation of concerns
