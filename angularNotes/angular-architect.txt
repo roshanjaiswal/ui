@@ -1,4 +1,4 @@
-https://www.youtube.com/watch?v=PruY9SFGzcU&list=PLivKgMimNalnKni_5KQGpwH7-lFZd0wu8
+ncehttps://www.youtube.com/watch?v=PruY9SFGzcU&list=PLivKgMimNalnKni_5KQGpwH7-lFZd0wu8
 
 **Angular Architecture:
 Angular follows a component-based architecture organized around key principles: modularity, reusability, and 
@@ -82,7 +82,7 @@ Anti-patterns in Angular
   Misusing Observables
 
 
-
+reference:- https://angular-enterprise.com/en/ngpost/courses/design-patterns/
 
 
 --------------------------------------------------------------------------------------------------------------
