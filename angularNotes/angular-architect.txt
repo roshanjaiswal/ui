@@ -55,6 +55,35 @@ Why This Architecture?
 
 
 
+**Design patterns :  are typical solutions to common problems in software design. Each pattern is like a blueprint that you can customize to solve a particular
+design problem in your code.
+https://blogs.halodoc.io/commonly-used-design-patterns-in-angular/
+-------------------------------------------------------------------------------------------------
+Design patterns are categorized into different areas, such as:
+  Gang of Four design patterns
+        Creational Patterns, Structural Patterns, and Behavioral Patterns
+  Architectural design patterns
+        MV* (MVC, MVP, MVVM) patterns, component-based patterns, micro-frontend, atomic design systems, Flux, Redux, and many more. 
+        Microfrontend Architecture and Atomic Design System
+  Rendering design patterns
+        Server-side Rendering and Pre-rendering
+  Performance design patterns
+        Caching API data using Transfer State
+  Angular component design patterns
+
+
+-Singleton Pattern
+-Factory Pattern
+-Facade Pattern
+
+
+Anti-patterns in Angular
+  Overusing the Singleton Pattern
+  Misusing Observables
+
+
+
+
 
 --------------------------------------------------------------------------------------------------------------
 Clean Code
